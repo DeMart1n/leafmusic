@@ -1,0 +1,48 @@
+/* src/components/PlaylistGrid.css */
+.playlist-grid {
+  display: grid;
+  /* Cria colunas que têm no mínimo 200px, preenchendo o espaço disponível */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px; /* Espaçamento entre os cards */
+}
+
+.playlist-card {
+  background-color: #181818;
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  overflow: hidden; /* Garante que nada saia dos cantos arredondados */
+}
+
+.playlist-card:hover {
+  background-color: #282828;
+}
+
+.playlist-card img {
+  width: 100%;
+  border-radius: 6px; /* Cantos arredondados para a imagem */
+  margin-bottom: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.playlist-card h4 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  color: #ffffff;
+  /* Garante que o texto não quebre em várias linhas e adicione "..." */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.playlist-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #b3b3b3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limita a descrição a 2 linhas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
